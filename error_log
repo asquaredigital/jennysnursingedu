@@ -1,0 +1,78 @@
+[13-Dec-2021 06:10:26 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:17:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:24:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:28:53 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:34:27 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:35:43 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 06:45:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 43
+[13-Dec-2021 06:45:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 43
+[13-Dec-2021 06:45:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 43
+[13-Dec-2021 06:45:56 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 43
+[13-Dec-2021 06:50:18 America/Boise] PHP Warning:  imagettftext(): Could not find/open font in /home2/asquarg1/public_html/jennys/image.php on line 49
+[13-Dec-2021 07:31:57 America/Boise] PHP Warning:  move_uploaded_file(jnc/images/online_nursing_marksheet/ad.JPG): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 77
+[13-Dec-2021 07:31:57 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpT7JSjt' to 'jnc/images/online_nursing_marksheet/ad.JPG' in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 77
+[13-Dec-2021 07:31:57 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'asquarg1_jen'@'localhost' (using password: YES) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 07:31:57 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 07:34:22 America/Boise] PHP Warning:  move_uploaded_file(jnc/images/online_nursing_marksheet/ad.JPG): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 77
+[13-Dec-2021 07:34:22 America/Boise] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfTcoi7' to 'jnc/images/online_nursing_marksheet/ad.JPG' in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 77
+[13-Dec-2021 07:34:22 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'asquarg1_jen'@'localhost' (using password: YES) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 07:34:22 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 07:50:11 America/Boise] PHP Parse error:  syntax error, unexpected '$relationship' (T_VARIABLE) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 13
+[13-Dec-2021 07:51:32 America/Boise] PHP Parse error:  syntax error, unexpected '$relationship' (T_VARIABLE) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 13
+[13-Dec-2021 07:52:50 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'asquarg1_jen'@'localhost' (using password: YES) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 07:52:50 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 08:15:16 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'asquarg1_jen'@'localhost' (using password: YES) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 08:15:16 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 08:45:03 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 08:45:03 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 08:48:06 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 93
+[13-Dec-2021 08:48:06 America/Boise] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 94
+[13-Dec-2021 12:44:00 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php:108
+Stack trace:
+#0 {main}
+  thrown in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 108
+[13-Dec-2021 12:48:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php:108
+Stack trace:
+#0 {main}
+  thrown in /home2/asquarg1/public_html/jennys/online_nursing_application_db.php on line 108
+[25-Dec-2021 03:52:15 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:52:15 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:52:15 America/Boise] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:52:59 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:52:59 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:52:59 America/Boise] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:55:51 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:55:51 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:55:51 America/Boise] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:56:08 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:56:08 America/Boise] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[25-Dec-2021 03:56:08 America/Boise] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/asquarg1/public_html/jennys/testpdo.php on line 3
+[08-Jul-2022 04:23:28 America/Boise] PHP Warning:  Undefined property: mysqli_result::$name in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 86
+[08-Jul-2022 04:23:28 America/Boise] PHP Warning:  Undefined property: mysqli_result::$mobile in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 88
+[08-Jul-2022 04:23:28 America/Boise] PHP Warning:  Undefined property: mysqli_result::$email in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 90
+[11-Jul-2022 02:15:26 America/Boise] PHP Warning:  Undefined array key "total_no_comp" in /home2/asquarg1/public_html/Jennys/online_nursing_application_post_db.php on line 41
+[23-Jul-2022 08:28:06 America/Boise] PHP Warning:  Undefined property: mysqli_result::$name in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 86
+[23-Jul-2022 08:28:06 America/Boise] PHP Warning:  Undefined property: mysqli_result::$mobile in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 88
+[23-Jul-2022 08:28:06 America/Boise] PHP Warning:  Undefined property: mysqli_result::$email in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 90
+[04-Aug-2022 06:49:54 America/Boise] PHP Warning:  Undefined property: mysqli_result::$name in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 86
+[04-Aug-2022 06:49:54 America/Boise] PHP Warning:  Undefined property: mysqli_result::$mobile in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 88
+[04-Aug-2022 06:49:54 America/Boise] PHP Warning:  Undefined property: mysqli_result::$email in /home2/asquarg1/public_html/Jennys/ajax-payment_1.php on line 90
+[17-Nov-2022 07:04:48 America/Boise] PHP Warning:  Undefined property: mysqli_result::$name in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 86
+[17-Nov-2022 07:04:48 America/Boise] PHP Warning:  Undefined property: mysqli_result::$mobile in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 88
+[17-Nov-2022 07:04:48 America/Boise] PHP Warning:  Undefined property: mysqli_result::$email in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 90
+[02-Apr-2023 02:01:05 America/Boise] PHP Warning:  Undefined array key "total_no_comp" in /home1/asqaured/public_html/jennysnursingedu/online_nursing_application_post_db.php on line 41
+[12-Apr-2023 02:32:32 America/Boise] PHP Warning:  Undefined array key "total_no_comp" in /home1/asqaured/public_html/jennysnursingedu/online_nursing_application_post_db.php on line 41
+[09-Jun-2023 08:02:11 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_ace3ecd269a0123a1ec289e8dd725adb, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[09-Jun-2023 08:02:11 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[09-Jun-2023 08:10:53 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_0c33e83027252eec04d2f751628253f0, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[09-Jun-2023 08:10:53 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[09-Jun-2023 23:05:54 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_f28cef42929a58ca94ca254235a9dfe0, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[09-Jun-2023 23:05:54 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[11-Jun-2023 11:46:15 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_44ccca8b071b9a74334f6fd16d245259, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[11-Jun-2023 11:46:15 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[16-Jun-2023 05:06:05 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_b3538915f8bfbda02f1f26a69d0f76a5, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[16-Jun-2023 05:06:05 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[18-Jun-2023 08:59:27 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_3b28923aee48e1616518096fd41e9e5b, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[18-Jun-2023 08:59:27 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[19-Jun-2023 06:06:53 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_499c0149eea2dfb226a966d6a56b6b4d, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[19-Jun-2023 06:06:53 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
