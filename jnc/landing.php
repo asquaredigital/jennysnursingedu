@@ -179,7 +179,7 @@ Welcome <?php echo $_SESSION["name"]; ?>. <a href="logout.php" tite="Logout">Log
       </div>
     </section><!-- End Courses Section -->
 <?php
-}else echo "<h1>Please login first .</h1>";
+}else echo "<h1 style='text-align:center'>Please login first .</h1>";
 ?>
 </div>
 
