@@ -99,7 +99,7 @@ if($total_data > 0)
     }
     else
     {
-      $att="<a href=\""."https://asquaredemo.com/Jennys/jnc/".$att."\" target=\"_blank\"><b>Marksheet</b></a>";
+      $att="<a href=\""."https://asquaredemo.com/jennysnursingedu/jnc/".$att."\" target=\"_blank\"><b>Marksheet</b></a>";
     }
     $down=" <form action=\"download.php\" method=\"post\">  <input type=\"hidden\" name=\"idd\" value=".$row["id"]."><button type=\"submit\" class=\"btn btn-primary\" style=\"background-color: #004a99;\"> Download </button> </form>";
 

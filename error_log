@@ -76,3 +76,26 @@ Stack trace:
 [18-Jun-2023 08:59:27 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
 [19-Jun-2023 06:06:53 America/Boise] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php82/sess_499c0149eea2dfb226a966d6a56b6b4d, O_RDWR) failed: No such file or directory (2) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
 [19-Jun-2023 06:06:53 America/Boise] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php82) in /home1/asqaured/public_html/jennysnursingedu/image.php on line 9
+[27-Jun-2023 13:27:46 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@admin' at line 1 in /home1/asqaured/public_html/jennysnursingedu/test.php:3
+Stack trace:
+#0 /home1/asqaured/public_html/jennysnursingedu/test.php(3): mysqli_query(Object(mysqli), 'SELECT * FROM a...')
+#1 {main}
+  thrown in /home1/asqaured/public_html/jennysnursingedu/test.php on line 3
+[27-Jun-2023 13:29:32 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@admin' at line 1 in /home1/asqaured/public_html/jennysnursingedu/test.php:5
+Stack trace:
+#0 /home1/asqaured/public_html/jennysnursingedu/test.php(5): mysqli_query(Object(mysqli), 'SELECT * FROM a...')
+#1 {main}
+  thrown in /home1/asqaured/public_html/jennysnursingedu/test.php on line 5
+[27-Jun-2023 13:29:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@admin' at line 1 in /home1/asqaured/public_html/jennysnursingedu/test.php:5
+Stack trace:
+#0 /home1/asqaured/public_html/jennysnursingedu/test.php(5): mysqli_query(Object(mysqli), 'SELECT * FROM a...')
+#1 {main}
+  thrown in /home1/asqaured/public_html/jennysnursingedu/test.php on line 5
+[27-Jun-2023 14:33:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"online_nursing_application_db" SET raszer_payment_id = "pay_M75THvT9mD5M8K" WHE' at line 1 in /home1/asqaured/public_html/jennysnursingedu/payment_id_store_1.php:18
+Stack trace:
+#0 /home1/asqaured/public_html/jennysnursingedu/payment_id_store_1.php(18): mysqli->query('UPDATE "online_...')
+#1 {main}
+  thrown in /home1/asqaured/public_html/jennysnursingedu/payment_id_store_1.php on line 18
+[27-Jun-2023 14:33:27 America/Boise] PHP Warning:  Undefined property: mysqli_result::$name in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 86
+[27-Jun-2023 14:33:27 America/Boise] PHP Warning:  Undefined property: mysqli_result::$mobile in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 88
+[27-Jun-2023 14:33:27 America/Boise] PHP Warning:  Undefined property: mysqli_result::$email in /home1/asqaured/public_html/jennysnursingedu/ajax-payment_1.php on line 90
