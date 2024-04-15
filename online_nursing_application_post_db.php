@@ -202,7 +202,7 @@ else
 		var totalAmount = getAmount * 100;
 		
 		var options = {
-					"key": "rzp_live_S8m6yIBjyJaOym", //rzp_test_TCeyJnSX9hGBjR //    your Razorpay Key Id
+					"key": "rzp_test_TCeyJnSX9hGBjR", //rzp_live_S8m6yIBjyJaOym //    your Razorpay Key Id
 					"amount": totalAmount,
 					"name": name,
 					"description": "Application Fees",

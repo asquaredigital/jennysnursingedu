@@ -6,7 +6,7 @@ $razorPayId = $_POST['razorpay_payment_id'];
 
 $ch = curl_init('https://api.razorpay.com/v1/payments/' . $razorPayId . '');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-curl_setopt($ch, CURLOPT_USERPWD, "rzp_live_S8m6yIBjyJaOym:VwgzQ6OOZAeQIYWfcM2L3w2C"); //rzp_test_TCeyJnSX9hGBjR:dal4vQJDVJiiYIrmpPcxTMyn //   Input your Razorpay Key Id and Secret Id here
+curl_setopt($ch, CURLOPT_USERPWD, "rzp_test_TCeyJnSX9hGBjR:dal4vQJDVJiiYIrmpPcxTMyn");  //rzp_live_S8m6yIBjyJaOym:VwgzQ6OOZAeQIYWfcM2L3w2C   Input your Razorpay Key Id and Secret Id here
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = json_decode(curl_exec($ch));
 
@@ -93,10 +93,39 @@ if ($response->status == 'authorized')
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
         // More headers
-        $headers .= 'From: <jennysnu@server.harshainfotech.com>' . "\r\n";
-        $headers .= 'Cc: info@jennysnursingedu.in' . "\r\n";
+        $headers = "From: www.jennysnursingedu.in" . "\r\n" .
+        "Reply-To: $email" . "\r\n" ;
 
-        mail($to, $subject, $message);
+
+        try {
+            $result = $sesClient->sendEmail(['Destination' => [
+                'ToAddresses' => [$recipientEmail],
+            ],
+            'Message' => [
+                'Body' => [
+                    'Text' => [
+                        'Charset' => 'UTF-8',
+                        'Data' => $message,
+                    ],
+                ],
+                'Subject' => [
+                    'Charset' => 'UTF-8',
+                    'Data' => $subject,
+                ],
+            ],
+            'Source' => $senderEmail,
+            'ReplyToAddresses' => [$email], // Specify Reply-To header
+        
+        ]);
+        
+        // Prepare JSON response
+        $response = ['Application sent successfully!'];
+        echo json_encode($response);
+        } catch (AwsException $e) {
+        // Prepare JSON error response
+        $response = ['Failed to send Application.'];
+        echo json_encode($response);
+        }
     }
     else
     {

@@ -30,12 +30,6 @@
   
 
 
-  <!-- =======================================================
-  * Template Name: Mentor - v4.6.0
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   <script>
 
 
