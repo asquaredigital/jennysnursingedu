@@ -1,11 +1,5 @@
 <?php
 
-require '../vendor/vendor/autoload.php';
-
-use Aws\Ses\SesClient;
-use Aws\Exception\AwsException;
-$config = require '../vendor/config.php';
-
 
 
 $data = ['payment_id' => $_POST['razorpay_payment_id'], 'amount' => $_POST['totalAmount'], 'mobile' => $_POST['mobile'], ];
@@ -21,7 +15,7 @@ $ch = curl_init('https://api.razorpay.com/v1/payments/' . $razorPayId . '');
 
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
-curl_setopt($ch, CURLOPT_USERPWD, "rzp_test_TCeyJnSX9hGBjR:dal4vQJDVJiiYIrmpPcxTMyn");  // rzp_live_S8m6yIBjyJaOym:VwgzQ6OOZAeQIYWfcM2L3w2C  Input your Razorpay Key Id and Secret Id here 
+curl_setopt($ch, CURLOPT_USERPWD, "rzp_live_S8m6yIBjyJaOym:VwgzQ6OOZAeQIYWfcM2L3w2C"); //rzp_test_TCeyJnSX9hGBjR:dal4vQJDVJiiYIrmpPcxTMyn  //   Input your Razorpay Key Id and Secret Id here 
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -163,30 +157,11 @@ if ($response->status == 'authorized')
 
     {
 
-
-        $awsKey = $config['aws']['key'];
-        $awsSecret = $config['aws']['secret'];
-        $awsRegion = $config['aws']['region'];
-
-        $sesClient = new SesClient([
-            'version' => 'latest',
-            'region' => $awsRegion,
-            'credentials' => [
-                'key' => $awsKey,
-                'secret' => $awsSecret,
-            ],
-        ]);
-       
-
-
         $to =$email;
-
-        $senderEmail = 'asquaremailer@gmail.com';
-        $recipientEmail = 'elavarasan5193@gmail.com';
 
         // $to = "harshamvc11@gmail.com";
 
-        $subject = "B.SC NURSING APPLICATION EMAIL";
+        $subject = "APPLICATION EMAIL";
 
 
 
@@ -210,40 +185,17 @@ if ($response->status == 'authorized')
 
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-        $headers = "From: www.jennysnursingedu.in" . "\r\n" .
-           "Reply-To: $email" . "\r\n" ;
 
 
-        try {
-            $result = $sesClient->sendEmail(['Destination' => [
-                'ToAddresses' => [$recipientEmail],
-            ],
-            'Message' => [
-                'Body' => [
-                    'Text' => [
-                        'Charset' => 'UTF-8',
-                        'Data' => $message,
-                    ],
-                ],
-                'Subject' => [
-                    'Charset' => 'UTF-8',
-                    'Data' => $subject,
-                ],
-            ],
-            'Source' => $senderEmail,
-            'ReplyToAddresses' => [$email], // Specify Reply-To header
-        
-        ]);
-        
-        // Prepare JSON response
-        $response = ['Application sent successfully!'];
-        echo json_encode($response);
-        } catch (AwsException $e) {
-        // Prepare JSON error response
-        $response = ['Failed to send Application.'];
-        echo json_encode($response);
-        }
+        // More headers
 
+        $headers .= 'From: <asquaredigitalsolutions@gmail.com>' . "\r\n";
+
+        $headers .= 'Cc: elavarasan5193@gmail.com' . "\r\n";
+
+
+
+        mail($to, $subject, $message);
 
     }
 

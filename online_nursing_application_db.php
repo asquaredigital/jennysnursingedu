@@ -130,7 +130,7 @@ if ($conn->query($sql) === TRUE) {
 <html>
     
     <input type="hidden" name="name" id='name' value='<?php echo $name; ?>'>
-    <input type="hidden" name="price" id='price' value='350'>
+    <input type="hidden" name="price" id='price' value='1'>
     <input type="hidden" name="email" id='email' value='<?php echo $email; ?>'>
     <input type="hidden" name="mobile" id='mobile' value='<?php echo $mobile; ?>'>
     <input type="hidden" name="last_id" id='last_id' value='<?php echo $last_id; ?>'>
@@ -150,7 +150,7 @@ if ($conn->query($sql) === TRUE) {
 		var last_id =  $("#last_id").val();
 		var totalAmount = getAmount * 100;
 		var options = {
-					"key": "rzp_test_TCeyJnSX9hGBjR", //rzp_live_S8m6yIBjyJaOym //your Razorpay Key Id 
+					"key": "rzp_live_S8m6yIBjyJaOym", //z// your Razorpay Key Id 
 					"amount": totalAmount,
 					"name": name,
 					"description": "Application Fees",
