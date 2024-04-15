@@ -1,4 +1,3 @@
-
 <?php
 require '../vendor/vendor/autoload.php';
 
@@ -27,21 +26,30 @@ $sesClient = new SesClient([
     ],
 ]);
 // Get form data
-$u_name = $_POST['name'];
-$u_email = $_POST['email'];
-$p_number = $_POST['contact'];
-$msg = $_POST['message'];
+$name = strip_tags(trim($_POST["name"]));
+$name = str_replace(array("\r","\n"),array(" "," "),$name);
+$email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+$contact = trim($_POST["contact1"]);
+$address = trim($_POST["address"]);
+$message = trim($_POST["message"]);
 
 // Set up email headers
-$headers = "From: www.jenneysacademy.com" . "\r\n" .
-           "Reply-To: $u_email" . "\r\n" ;
+$headers = "From: www.jennysnursingedu.in" . "\r\n" .
+           "Reply-To: $email" . "\r\n" ;
 
 // Set up email content
 $subject = 'Enquiry Form the Website';
-$message = "Name: $u_name\nEmail: $u_email\nPhone Number: $p_number\nMessage: $msg";
+// Build the email content.
+$email_content = "Name: $name\n\n";
+$email_content .= "Email: $email\n\n";
+$email_content .= "Contact: $contact\n\n";
+$email_content .= "Address: $address\n\n";
+$email_content .= "Message :$message\n\n";
 
-$senderEmail = 'mailer@jenneysacademy.com';
-$recipientEmail = 'jenneysacademy@gmail.com';
+
+$senderEmail = 'asquaremailer@gmail.com';
+//$recipientEmail = 'jennyscon2010@gmail.com';
+$recipientEmail = 'elavarasan5193@gmail.com';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -54,7 +62,7 @@ try {
         'Body' => [
             'Text' => [
                 'Charset' => 'UTF-8',
-                'Data' => $message,
+                'Data' => $email_content,
             ],
         ],
         'Subject' => [
@@ -63,7 +71,7 @@ try {
         ],
     ],
     'Source' => $senderEmail,
-    'ReplyToAddresses' => [$u_email], // Specify Reply-To header
+    'ReplyToAddresses' => [$email], // Specify Reply-To header
 
 ]);
 
