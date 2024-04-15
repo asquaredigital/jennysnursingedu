@@ -1,67 +1,86 @@
 <?php
-    // My modifications to mailer script from:
-    // http://blog.teamtreehouse.com/create-ajax-contact-form
-    // Added input sanitizing to prevent injection
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $contact = trim($_POST["contact1"]);
-        $address = trim($_POST["address"]);
-        $message = trim($_POST["message"]);
+require '../vendor/vendor/autoload.php';
+
+use Aws\Ses\SesClient;
+use Aws\Exception\AwsException;
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // Script accessed directly without form submission
+    $response = array('message' => 'Invalid request.');
+    echo json_encode($response);
+    exit;
+}
+
+$config = require '../vendor/config.php';
+
+$awsKey = $config['aws']['key'];
+$awsSecret = $config['aws']['secret'];
+$awsRegion = $config['aws']['region'];
+
+$sesClient = new SesClient([
+    'version' => 'latest',
+    'region' => $awsRegion,
+    'credentials' => [
+        'key' => $awsKey,
+        'secret' => $awsSecret,
+    ],
+]);
+// Get form data
+$name = strip_tags(trim($_POST["name"]));
+$name = str_replace(array("\r","\n"),array(" "," "),$name);
+$email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+$contact = trim($_POST["contact1"]);
+$address = trim($_POST["address"]);
+$message = trim($_POST["message"]);
+
+// Set up email headers
+$headers = "From: www.jennysnursingedu.in" . "\r\n" .
+           "Reply-To: $email" . "\r\n" ;
+
+// Set up email content
+$subject = 'Enquiry Form the Website';
+// Build the email content.
+$email_content = "Name: $name\n\n";
+$email_content .= "Email: $email\n\n";
+$email_content .= "Contact: $contact\n\n";
+$email_content .= "Address: $address\n\n";
+$email_content .= "Message :$message\n\n";
 
 
-        // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($address) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
-            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-            exit;
-        }
+$senderEmail = 'asquaremailer@gmail.com';
+//$recipientEmail = 'jennyscon2010@gmail.com';
+$recipientEmail = 'elavarasan5193@gmail.com';
 
-        // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "jennyscon2010@gmail.com";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-        // Set the email subject.
-        $subject = "Enquiry from $name";
-        $from="jenneyswebsite@gmail.com";
-        $sentby="eladinesh@ymail.com";
-        $retrun="eladinesh@ymail.com";
+try {
+    $result = $sesClient->sendEmail(['Destination' => [
+        'ToAddresses' => [$recipientEmail],
+    ],
+    'Message' => [
+        'Body' => [
+            'Text' => [
+                'Charset' => 'UTF-8',
+                'Data' => $$email_content,
+            ],
+        ],
+        'Subject' => [
+            'Charset' => 'UTF-8',
+            'Data' => $subject,
+        ],
+    ],
+    'Source' => $senderEmail,
+    'ReplyToAddresses' => [$email], // Specify Reply-To header
 
-        // Build the email content.
-        $email_content = "Name: $name\n\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Contact: $contact\n\n";
-        $email_content .= "Address: $address\n\n";
-        $email_content .= "Message :$message\n\n";
+]);
 
-
-        // Build the email headers.
-        $email_headers = "From: $name <$from>\n";
-        $email_headers .="Reply-To: $email\n";
-       // $email_headers .="Sent by: $sentby\n";
-        //$email_headers .= "Return-Path: $retrun";
-
-        // Send the email.
-       // if (mail($recipient, $subject, $email_content, $email_headers)) {
-                if (mail($recipient, $subject, $email_content, $email_headers)) {
-
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-        }
-
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
-    }
-
+// Prepare JSON response
+$response = ['message' => 'Email sent successfully!', 'messageId' => $result['MessageId']];
+echo json_encode($response);
+} catch (AwsException $e) {
+// Prepare JSON error response
+$response = ['message' => 'Failed to send email.', 'error' => $e->getAwsErrorMessage()];
+echo json_encode($response);
+}
 ?>
