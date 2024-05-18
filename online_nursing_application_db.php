@@ -130,7 +130,7 @@ if ($conn->query($sql) === TRUE) {
 <html>
     
     <input type="hidden" name="name" id='name' value='<?php echo $name; ?>'>
-    <input type="hidden" name="price" id='price' value='350'>
+    <input type="hidden" name="price" id='price' value='400'>
     <input type="hidden" name="email" id='email' value='<?php echo $email; ?>'>
     <input type="hidden" name="mobile" id='mobile' value='<?php echo $mobile; ?>'>
     <input type="hidden" name="last_id" id='last_id' value='<?php echo $last_id; ?>'>
