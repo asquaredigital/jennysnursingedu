@@ -71,6 +71,7 @@ $output = '
     <th>Phone</th>
     <th>Email</th>
     <th>Payment</th>
+    <th>Reg Date (YYYY/MM/DD HH/MM/SS)</th>
     <th>Attachment</th>
     <th>View Application</th>
     <th>Download Application</th>
@@ -114,7 +115,7 @@ if($total_data > 0)
       <td>'.$row["mobile"].'</td>
       <td>'.$row["email"].'</td>
       <td>'.$row["pay_status"].'</td>
-
+      <td>'.$row["date"].'</td>
       <td>'.$att.'</td>
       <td>'.$view.'</td>
 

@@ -1003,6 +1003,18 @@ td
 </td>
 </tr>
 
+<tr>
+<td style=\"width:20px\"></td>
+<td>
+<b> Reg Date and Time (YYYY/MM/DD HH/MM/SS) </b>
+</td>
+<td style=\"width:30px\"> <b>:</b>
+</td>
+<td>".$row["date"]." 
+</td>
+<td>
+</td>
+</tr>
 
 
 </table>";
