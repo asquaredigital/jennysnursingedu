@@ -48,8 +48,8 @@ $email_content .= "Message :$message\n\n";
 
 
 $senderEmail = 'asquaremailer@gmail.com';
-//$recipientEmail = 'jennyscon2010@gmail.com';
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'jennyscon2010@gmail.com';
+//$recipientEmail = 'elavarasan5193@gmail.com';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
