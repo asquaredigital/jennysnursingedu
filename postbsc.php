@@ -795,7 +795,7 @@ div
 
 
  <div class="form-group" style="font-size:18px;font-weight:bold">
-        Application Fees 400rs 
+        Application Fees 450rs 
 
         </div> 
         <div class="row">
