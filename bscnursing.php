@@ -912,6 +912,34 @@ div
             </script>
 
 
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var fields = {
+    name: document.querySelector('[name="name"]'),
+    dob: document.getElementById('date'),
+    phone: document.querySelector('[name="mobile"]'),
+    email: document.querySelector('[name="email"]')
+  };
+
+  Object.keys(fields).forEach(function (key) {
+    var value = params.get(key);
+    if (value && fields[key]) fields[key].value = value;
+  });
+
+  var gender = params.get('gender');
+  if (gender) {
+    var genderOptions = document.querySelectorAll('input[name="gender"]');
+    genderOptions.forEach(function (option) {
+      option.checked = option.value.toLowerCase() === gender.toLowerCase();
+    });
+  }
+
+  if (fields.dob && fields.dob.value && typeof getAge === 'function') getAge();
+})();
+</script>
+
 </body>
 
 </html>

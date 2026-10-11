@@ -181,7 +181,72 @@ button
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-    <!--<a href="courses.html" class="get-started-btn">Get Started</a>--> 
+      <a href="bscnursing.php" class="header-apply-now">Apply Now</a>
+
+      <style>
+        .header-apply-now {
+          display: inline-block;
+          margin-left: 24px;
+          padding: 10px 20px;
+          background: #004a99;
+          color: #fff !important;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.2;
+          white-space: nowrap;
+          text-decoration: none !important;
+          transition: background .2s ease;
+        }
+        .header-apply-now:hover {
+          background: #003875;
+          color: #fff !important;
+        }
+        @media (max-width: 991px) {
+          .header-apply-now {
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 12px;
+          }
+        }
+      </style>
+
+      <style>
+        /* Keep the college logo and name on a single line in the desktop header. */
+        #header .logo {
+          flex: 0 0 auto;
+          margin-right: 24px;
+          max-width: none;
+          white-space: nowrap;
+        }
+        #header .logo a {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          font-size: 13px;
+          letter-spacing: .6px;
+        }
+        #header .logo img {
+          display: block;
+          flex: 0 0 auto;
+          max-height: 58px;
+          width: auto;
+          margin-right: 8px;
+        }
+        @media (max-width: 1199px) {
+          #header .logo { margin-right: 12px; }
+          #header .logo a { font-size: 11px; letter-spacing: 0; }
+          #header .logo img { max-height: 48px; }
+          .header-apply-now { margin-left: 8px; padding: 8px 12px; }
+        }
+        @media (max-width: 991px) {
+          #header .logo { margin-right: auto; }
+          #header .logo a { font-size: 13px; }
+          #header .logo img { max-height: 45px; }
+        }
+      </style>
+
+    <!--<a href="course class="get-started-btn">Get Started</a>--> 
 
     </div>
   </header><!-- End Header -->
@@ -733,6 +798,60 @@ button
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <!-- Quick application modal -->
+  <style>
+    #quickApplicationOverlay{position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:99999;display:none;align-items:center;justify-content:center;padding:16px}
+    #quickApplicationOverlay .qa-card{background:#fff;width:100%;max-width:520px;border-radius:12px;box-shadow:0 18px 55px rgba(0,0,0,.3);padding:26px;position:relative;max-height:92vh;overflow-y:auto}
+    #quickApplicationOverlay .qa-title{color:#004a99;font-size:24px;font-weight:700;margin:0 35px 8px 0}
+    #quickApplicationOverlay .qa-subtitle{font-size:14px;color:#666;margin-bottom:20px}
+    #quickApplicationOverlay .qa-close{position:absolute;right:14px;top:10px;border:0;background:transparent;color:#555;font-size:30px;line-height:1;cursor:pointer}
+    #quickApplicationOverlay .qa-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    #quickApplicationOverlay .qa-field{margin:0}
+    #quickApplicationOverlay label{display:block;font-size:13px;font-weight:600;margin-bottom:5px;color:#333}
+    #quickApplicationOverlay input,#quickApplicationOverlay select{width:100%;height:43px;padding:9px 10px;border:1px solid #d3d9e0;border-radius:5px;font:inherit;background:#fff}
+    #quickApplicationOverlay .qa-submit{width:100%;border:0;border-radius:5px;background:#004a99;color:#fff;font-weight:600;padding:12px;margin-top:20px}
+    #quickApplicationOverlay .qa-submit:hover{background:#003875}
+    @media(max-width:520px){#quickApplicationOverlay .qa-card{padding:22px 18px}#quickApplicationOverlay .qa-grid{grid-template-columns:1fr}}
+  </style>
+  <div id="quickApplicationOverlay" role="dialog" aria-modal="true" aria-labelledby="qaHeading">
+    <div class="qa-card">
+      <button type="button" class="qa-close" id="qaClose" aria-label="Close application form">&times;</button>
+      <h2 class="qa-title" id="qaHeading">Start Your Application</h2>
+      <p class="qa-subtitle">Enter your details to continue to the B.Sc Nursing application.</p>
+      <form id="quickApplicationForm">
+        <div class="qa-grid">
+          <div class="qa-field"><label for="qaName">Full Name *</label><input id="qaName" name="name" type="text" autocomplete="name" required></div>
+          <div class="qa-field"><label for="qaGender">Gender *</label><select id="qaGender" name="gender" required><option value="">Select gender</option><option value="Female">Female</option><option value="Male">Male</option><option value="Other">Other</option></select></div>
+          <div class="qa-field"><label for="qaDob">Date of Birth *</label><input id="qaDob" name="dob" type="date" required></div>
+          <div class="qa-field"><label for="qaPhone">Phone Number *</label><input id="qaPhone" name="phone" type="tel" inputmode="tel" pattern="[0-9+() .-]{7,20}" autocomplete="tel" required></div>
+          <div class="qa-field" style="grid-column:1/-1"><label for="qaEmail">Email Address *</label><input id="qaEmail" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <button class="qa-submit" type="submit">Continue to Application <i class="bi bi-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var overlay=document.getElementById('quickApplicationOverlay');
+      var form=document.getElementById('quickApplicationForm');
+      function closeModal(){overlay.style.display='none';}
+      document.getElementById('qaClose').addEventListener('click',closeModal);
+      overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.style.display==='flex')closeModal();});
+      window.addEventListener('load',function(){setTimeout(function(){overlay.style.display='flex';document.getElementById('qaName').focus();},350);});
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(!form.reportValidity())return;
+        var data={};new FormData(form).forEach(function(value,key){data[key]=value;});
+        try{sessionStorage.setItem('bscNursingApplicant',JSON.stringify(data));}catch(err){}
+        var target=new URL('bscnursing.php',window.location.href);
+        Object.keys(data).forEach(function(key){target.searchParams.set(key,data[key]);});
+        window.location.href=target.toString();
+      });
+    })();
+  </script>
 
 </body>
 
