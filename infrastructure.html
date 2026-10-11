@@ -189,9 +189,19 @@ a:active {
           .header-apply-now { margin-left: 8px; padding: 8px 12px; }
         }
         @media (max-width: 991px) {
-          #header .logo { margin-right: auto; }
-          #header .logo a { font-size: 13px; }
-          #header .logo img { max-height: 45px; }
+          #header .container { flex-wrap: nowrap; gap: 8px; }
+          #header .logo { margin-right: auto; min-width: 0; flex: 1 1 auto; }
+          #header .logo a { font-size: clamp(10px, 2.8vw, 13px); letter-spacing: 0; }
+          #header .logo img { max-height: 42px; margin-right: 5px; }
+          #navbar { flex: 0 0 auto; order: 3; margin-left: 0; }
+          #navbar .mobile-nav-toggle { display: block; font-size: 28px; line-height: 1; margin-left: 0; }
+          .header-apply-now { flex: 0 0 auto; order: 2; margin-left: 0; padding: 8px 10px; font-size: 12px; }
+        }
+        @media (max-width: 380px) {
+          #header .logo a { font-size: 10px; }
+          #header .logo img { max-height: 36px; }
+          .header-apply-now { padding: 7px 8px; font-size: 11px; }
+          #navbar .mobile-nav-toggle { font-size: 25px; }
         }
       </style>
 

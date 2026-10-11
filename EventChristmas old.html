@@ -36,7 +36,8 @@
 
   <!-- ======= Header ======= -->
    <!-- ======= Header ======= -->
-   <header id="header" class="fixed-top">
+  
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo.png">Jennys College of Nursing</a></h1>
@@ -87,7 +88,82 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-    <!--<a href="courses.html" class="get-started-btn">Get Started</a>--> 
+      <a href="bscnursing.php" class="header-apply-now">Apply Now</a>
+
+      <style>
+        .header-apply-now {
+          display: inline-block;
+          margin-left: 24px;
+          padding: 10px 20px;
+          background: #004a99;
+          color: #fff !important;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.2;
+          white-space: nowrap;
+          text-decoration: none !important;
+          transition: background .2s ease;
+        }
+        .header-apply-now:hover {
+          background: #003875;
+          color: #fff !important;
+        }
+        @media (max-width: 991px) {
+          .header-apply-now {
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 12px;
+          }
+        }
+      </style>
+
+      <style>
+        /* Keep the college logo and name on a single line in the desktop header. */
+        #header .logo {
+          flex: 0 0 auto;
+          margin-right: 24px;
+          max-width: none;
+          white-space: nowrap;
+        }
+        #header .logo a {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          font-size: 13px;
+          letter-spacing: .6px;
+        }
+        #header .logo img {
+          display: block;
+          flex: 0 0 auto;
+          max-height: 58px;
+          width: auto;
+          margin-right: 8px;
+        }
+        @media (max-width: 1199px) {
+          #header .logo { margin-right: 12px; }
+          #header .logo a { font-size: 11px; letter-spacing: 0; }
+          #header .logo img { max-height: 48px; }
+          .header-apply-now { margin-left: 8px; padding: 8px 12px; }
+        }
+        @media (max-width: 991px) {
+          #header .container { flex-wrap: nowrap; gap: 8px; }
+          #header .logo { margin-right: auto; min-width: 0; flex: 1 1 auto; }
+          #header .logo a { font-size: clamp(10px, 2.8vw, 13px); letter-spacing: 0; }
+          #header .logo img { max-height: 42px; margin-right: 5px; }
+          #navbar { flex: 0 0 auto; order: 3; margin-left: 0; }
+          #navbar .mobile-nav-toggle { display: block; font-size: 28px; line-height: 1; margin-left: 0; }
+          .header-apply-now { flex: 0 0 auto; order: 2; margin-left: 0; padding: 8px 10px; font-size: 12px; }
+        }
+        @media (max-width: 380px) {
+          #header .logo a { font-size: 10px; }
+          #header .logo img { max-height: 36px; }
+          .header-apply-now { padding: 7px 8px; font-size: 11px; }
+          #navbar .mobile-nav-toggle { font-size: 25px; }
+        }
+      </style>
+
+    <!--<a href="course class="get-started-btn">Get Started</a>--> 
 
     </div>
   </header><!-- End Header -->
