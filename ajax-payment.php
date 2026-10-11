@@ -94,7 +94,8 @@ if ($response->status == 'authorized')
 
         // More headers
         $headers .= 'From: <jennysnu@server.harshainfotech.com>' . "\r\n";
-        $headers .= 'Cc: info@jennysnursingedu.in' . "\r\n";
+        //$headers .= 'Cc: info@jennysnursingedu.in' . "\r\n";
+        $headers .= 'Cc: asquaredigitalsolutions@gmail.com' . "\r\n";
 
         mail($to, $subject, $message);
     }
